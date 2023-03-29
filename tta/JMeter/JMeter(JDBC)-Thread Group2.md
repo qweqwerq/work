@@ -3,7 +3,7 @@
 > > > Loop Count: 1000 
 > > > > **JDBC Request:**
 > > > > 
-> > > > > Variables Name: jdbcConfig
+> > > > > Variables Name: jdbcConfig2
 > > > > 
 > > > > > Query Type: Select Statement
 > > > > 
@@ -15,7 +15,7 @@
 > > >
 > > > > **JDBC Connection Configuration:**
 > > > >
-> > > > > Variable Name for created pool: jdbcConfig
+> > > > > Variable Name for created pool: jdbcConfig2
 > > > > 
 > > > > > Database URL: jdbc:mysql://210.104.181.107:3306/hooo?serverTimezone=UTC
 > > > > 
