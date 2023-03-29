@@ -4,6 +4,7 @@
 > > JDBC Request:
 > > > Variables Name: jdbcConfig
 > > > Query Type: Prepared Update Statement
+> > > 
 > > > Query: update t1 set c2=1 where c1=${increment_counter}
 > > View Results Tree
 > > Summary Report
