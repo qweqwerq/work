@@ -1,8 +1,9 @@
-> Thread Group1:
-> > Loop Controller:
+> **Thread Group1:**
+> > **Loop Controller:**
 > > > Loop Count: 1000 
-> > > >JDBC Request:
-> > > Variables Name: jdbcConfig
+> > > > **JDBC Request:**
+> > > > 
+> > > > Variables Name: jdbcConfig
 > > > 
 > > > Query Type: Prepared Update Statement
 > > > 
