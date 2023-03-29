@@ -3,7 +3,7 @@
 -- GRANT ALL PRIVILEGES ON *.* TO admin@'%' WITH GRANT OPTION; 
 
 -- mysqlsh tool 
--- 1/2/3번 서버별로..
+-- 1/2/3번 서버별로
 dba.configureInstance('root:@127.0.0.1', {clusterAdmin: 'admin', clusterAdminPassword:'Ttatest1!', password:'Ttatest1!'})
 
 -- cluster configuration check.
@@ -14,15 +14,15 @@ dba.checkInstanceConfiguration('admin@<3번ip>')
 -- 1번에서 admin으로 로그인
 \c admin@<1번ip>
 
--- 이상이 없으면 cluster 생성 (1번)
+-- cluster 생성 (1번)
 var cluster = dba.createCluster('testCluster')
 cluster.status()
 
--- 2번 추가하고 데이터 동기화
+-- 2번 추가, 동기화
 cluster.addInstance('admin@<2번ip>')
 cluster.status()
 
--- 3번 추가하고 데이터 동기화
+-- 3번 추가, 동기화
 cluster.addInstance('admin@<3번ip>')
 cluster.status()
 
@@ -40,7 +40,7 @@ mysql -uadmin -p -h<3번ip> -P6447    -- read 전용
 -- 연결된 세션에 host, port 확인
 SELECT @@hostname, @@port;
 
--- connection round robin 테스트
+-- Load Balancing 테스트(RR 알고리즘)
 mysql -u root -p'Ttatest1!' -h<3번ip> -P 6447 -e "select @@hostname, @@port";
 
 -- primary 전환
