@@ -27,17 +27,13 @@
             https://www.boannews.com/media/view.asp?idx=56892
             Black Falcon
 
-구분
-취약점 설명
-점검 및 테스트 항목
-M1. 적절하지 않은 플랫폼 사용
-- 플랫폼의 보안 개발지침 위반
-- 개발/운영 중 실수
-* 설치 : adb install ImageViewer-debug.apk
-
+|구분|취약점 설명|점검 및 테스트 항목|
+|----|----------|-----------------|
+|M1. 적절하지 않은 플랫폼 사용|- 플랫폼의 보안 개발지침 위반
+- 개발/운영 중 실수|* 설치 : adb install ImageViewer-debug.apk
 M1-01) 과도한 앱 권한 요청 여부
 M1-02) 안드로이드 가상장치 실행 여부
-※ http://www.bluestacks.co.kr 
+※ http://www.bluestacks.co.kr|
 M2. 취약한 데이터 저장소
 - 취약한 데이터 저장소
 - 의도하지 않은 데이터 노출
